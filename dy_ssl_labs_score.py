@@ -21,7 +21,7 @@ def run_query_1(action=None, success=None, container=None, results=None, handle=
     
     # build parameters list for 'run_query_1' call
     parameters.append({
-        'host': "www.virginia529.com",
+        'host': "www.splunk.com",
         'max_age': 1,
         'publish': "off",
         'start_new': "off",
