@@ -29,7 +29,7 @@ def run_query_1(action=None, success=None, container=None, results=None, handle=
         'return_all_data': "on",
     })
 
-    phantom.act(action="run query", parameters=parameters, assets=['ssl_labs'], callback=format_1, name="run_query_1")
+    phantom.act(action="run query", parameters=parameters, assets=['qualys_ssl_labs'], callback=format_1, name="run_query_1")
 
     return
 
@@ -55,7 +55,7 @@ def send_email_2(action=None, success=None, container=None, results=None, handle
         'attachments': "",
     })
 
-    phantom.act(action="send email", parameters=parameters, assets=['exchange'], name="send_email_2")
+    phantom.act(action="send email", parameters=parameters, assets=['smtp'], name="send_email_2")
 
     return
 

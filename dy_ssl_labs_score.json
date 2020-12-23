@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "",
-            "hash": "b9798c2a7517f7d4e91ba70d0d2c6e19fb5f4d80",
+            "hash": "588c0994a2d1ad321ea189e84c8701abaa7b7bf9",
             "joint": {
                 "cells": [
                     {
@@ -414,7 +414,7 @@
                                 "id": 12,
                                 "loaded": false,
                                 "missing": false,
-                                "name": "ssl_labs",
+                                "name": "qualys_ssl_labs",
                                 "output": [
                                     {
                                         "column_name": "host",
@@ -712,7 +712,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def run_query_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_query_1() called')\n\n    # collect data for 'run_query_1' call\n\n    parameters = []\n    \n    # build parameters list for 'run_query_1' call\n    parameters.append({\n        'host': \"www.virginia529.com\",\n        'max_age': 1,\n        'publish': \"off\",\n        'start_new': \"off\",\n        'ignore_mismatch': \"off\",\n        'return_all_data': \"on\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['ssl_labs'], callback=format_1, name=\"run_query_1\")\n\n    return",
+                        "block_code": "def run_query_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('run_query_1() called')\n\n    # collect data for 'run_query_1' call\n\n    parameters = []\n    \n    # build parameters list for 'run_query_1' call\n    parameters.append({\n        'host': \"www.virginia529.com\",\n        'max_age': 1,\n        'publish': \"off\",\n        'start_new': \"off\",\n        'ignore_mismatch': \"off\",\n        'return_all_data': \"on\",\n    })\n\n    phantom.act(action=\"run query\", parameters=parameters, assets=['qualys_ssl_labs'], callback=format_1, name=\"run_query_1\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 36,
                         "callsback": true,
@@ -1138,7 +1138,7 @@
                                 "id": 13,
                                 "loaded": false,
                                 "missing": false,
-                                "name": "exchange",
+                                "name": "smtp",
                                 "output": [
                                     {
                                         "column_name": "Status",
@@ -1412,7 +1412,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def send_email_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('send_email_2() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'send_email_2' call\n    formatted_data_1 = phantom.get_format_data(name='format_1')\n\n    parameters = []\n    \n    # build parameters list for 'send_email_2' call\n    parameters.append({\n        'cc': \"\",\n        'to': \"dyoung@virginia529.com\",\n        'bcc': \"\",\n        'body': formatted_data_1,\n        'from': \"phantom@virginia529.com\",\n        'headers': \"\",\n        'subject': formatted_data_1,\n        'attachments': \"\",\n    })\n\n    phantom.act(action=\"send email\", parameters=parameters, assets=['exchange'], name=\"send_email_2\")\n\n    return",
+                        "block_code": "def send_email_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('send_email_2() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'send_email_2' call\n    formatted_data_1 = phantom.get_format_data(name='format_1')\n\n    parameters = []\n    \n    # build parameters list for 'send_email_2' call\n    parameters.append({\n        'cc': \"\",\n        'to': \"dyoung@virginia529.com\",\n        'bcc': \"\",\n        'body': formatted_data_1,\n        'from': \"phantom@virginia529.com\",\n        'headers': \"\",\n        'subject': formatted_data_1,\n        'attachments': \"\",\n    })\n\n    phantom.act(action=\"send email\", parameters=parameters, assets=['smtp'], name=\"send_email_2\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -1519,7 +1519,7 @@
                         "status": "",
                         "title": "Generic",
                         "type": "coa.Action",
-                        "warn": "",
+                        "warn": false,
                         "z": 33
                     }
                 ]
@@ -1528,9 +1528,9 @@
         },
         "python_version": "2.7",
         "schema": 4,
-        "version": "4.9.39220"
+        "version": "4.10.0.40961"
     },
-    "create_time": "2020-12-23T19:29:40.735592+00:00",
+    "create_time": "2020-12-23T19:30:19.075933+00:00",
     "draft_mode": false,
     "labels": [
         "*"
