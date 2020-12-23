@@ -46,10 +46,10 @@ def send_email_2(action=None, success=None, container=None, results=None, handle
     # build parameters list for 'send_email_2' call
     parameters.append({
         'cc': "",
-        'to': "dyoung@virginia529.com",
+        'to': "pmurphy@splunk.com",
         'bcc': "",
         'body': formatted_data_1,
-        'from': "phantom@virginia529.com",
+        'from': "pmurphy@splunk.com",
         'headers': "",
         'subject': formatted_data_1,
         'attachments': "",
